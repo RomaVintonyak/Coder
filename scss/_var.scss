@@ -1,0 +1,20 @@
+/*colors Variable*/
+$black: #000000;
+$white: #ffffff;
+$blue: #069;
+$text: #333333;
+$silver: #707172;
+
+
+/*google foonts*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+$font: 'Ubuntu', sans-serif;
+
+
+/*media Variable*/
+$mobile-xxsm: 350px;
+$mobile-xsm: 400px;
+$mobile-sm: 576px;
+$mobile: 768px;
+$tablet: 991px;
+$notebook: 1366px;

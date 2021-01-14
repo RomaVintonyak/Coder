@@ -1,0 +1,37 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.main__sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding-left: 70px;
+  padding-right: 70px;
+  width: 400px;
+  max-width: 400px;
+  background-color: rgba($color: #b3b3b3, $alpha: 0.3);
+}
+.sidebar__button {
+  outline: none;
+  border: none;
+  display: block;
+  position: absolute;
+  right: -30px;
+  top: 0.5rem;
+  background-color: rgba($color: #b3b3b3, $alpha: 0.5);
+  color: white;
+  padding: 15px 15px;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  &:focus{
+    outline: none;
+  }
+}

@@ -1,0 +1,32 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+  @include notebook {
+    max-width: 1178px;
+  }
+  @include tablet {
+    max-width: 970px;
+  }
+  @include mobile {
+    max-width: 756px;
+  }
+  @include mobile-sm{
+    max-width: 554px;
+  }
+}
+.container-fluid{
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
