@@ -45,6 +45,12 @@ a {
 @import "./mixin.scss";
 /*=================================*/
 /*block*/
+/*container*/
+@import "block/container.scss";
+/*sidebar*/
 @import "block/asside.scss";
+/*footer*/
+@import "block/footer.scss";
+
 /*=================================*/
 /*vendor*/

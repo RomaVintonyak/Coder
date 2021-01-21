@@ -15,23 +15,124 @@
   padding-right: 70px;
   width: 400px;
   max-width: 400px;
-  background-color: rgba($color: #b3b3b3, $alpha: 0.3);
+  background-color: rgba($color: #b3b3b3, $alpha: 0.5);
 }
 .sidebar__button {
   outline: none;
   border: none;
-  display: block;
+  display: none;
   position: absolute;
-  right: -30px;
+  right: -44px;
   top: 0.5rem;
-  background-color: rgba($color: #b3b3b3, $alpha: 0.5);
+  background-color: rgba($color: #b3b3b3, $alpha: 0.6);
   color: white;
   padding: 15px 15px;
-  transition: all 0.3s ease;
+  transition: background-color 0.4s ease;
   border-radius: 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  &:focus{
+  &:focus {
     outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($color: #b3b3b3, $alpha: 1);
+  }
+}
+.sidebar__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__brand {
+  box-sizing: content-box;
+  width: 100%;
+  max-width: 230px;
+  min-height: 160px;
+  text-align: center;
+  margin: 70px auto 90px;
+  &--border1 {
+    border: 1px solid #fff;
+    position: relative;
+  }
+  &--border2 {
+    border: 1px solid #fff;
+    position: relative;
+    top: 10px;
+    left: 10px;
+
+    a {
+      display: block;
+      padding: 30px;
+      text-decoration: none;
+      h1 {
+        font-family: $font;
+        font-weight: 300;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: $white;
+      }
+    }
+  }
+}
+.nav__menu{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: right;
+  width: 100%;
+}
+.nav__item{
+  width: 75%;
+  margin-bottom: 1.5rem;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.nav__link{
+  text-decoration: none;
+  display: inline-block;
+  span{
+    &:first-child{
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 300;
+      font-size: 1.2rem;
+      font-family: $font;
+      margin-right: 1.25rem;
+      line-height: 0;
+    }
+    &:last-child{
+      visibility: hidden;
+      opacity: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      float: right;
+    }
+  }
+  &:hover{
+    span{
+      &:last-child{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    animation-name: blick;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+}
+@keyframes blick{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.1;
   }
 }

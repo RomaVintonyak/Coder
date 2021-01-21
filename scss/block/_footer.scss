@@ -1,0 +1,49 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+#footer{
+  margin-bottom: 2rem;
+}
+.footer__button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.social__button{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+  border-radius: 5px;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease;
+  &:last-child{
+    margin-right: 0;
+  }
+  i{
+    color: $black;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+  }
+  &:hover{
+    background-color: $blue;
+    i{
+      color: $white;
+    }
+  }
+}
+.footer__copyright{
+  font-size: 1rem;
+  color: $white;
+  font-weight: 300;
+  color: $white;
+}
