@@ -127,6 +127,14 @@
     animation-timing-function: ease;
     animation-iteration-count: infinite;
   }
+  &--active{
+    span{
+      &:last-child{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
 @keyframes blick{
   0%{
