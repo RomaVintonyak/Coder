@@ -1073,8 +1073,135 @@ a:focus {
 }
 
 #wedo {
+    display: flex;
     width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.wedo__row {
+    width: calc(100% - 400px);
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wedo__title h2 {
+    font-family: inherit;
+    font-size: 2.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.wedo__title h2 span {
+    margin-left: 0.5rem;
+    color: #069;
+}
+
+.wedo__title p {
+    margin-top: 1rem;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #333333;
+}
+
+.wedo__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+.wedo__collum {
+    flex-basis: 40%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wedo__collum:hover .collum__icon {
+    border-color: #069;
+}
+
+.wedo__collum:hover .collum__icon .icon__holder {
+    background-color: #006699;
+    transform: scale(1.1);
+}
+
+.wedo__collum:hover .collum__icon .icon__holder .icon__container i {
+    color: #ee171f;
+}
+
+.collum__icon {
+    border: 2px solid #707172;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+}
+
+.icon__holder {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: rgba(0, 102, 153, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.icon__border {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #707172;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.icon__container {
+    transition: transform 0.3s ease;
+}
+
+.icon__container i {
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.collum__text {
+    text-align: center;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.collum__text h4 {
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333333;
+}
+
+.collum__text p {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333333;
+    margin-top: 1rem;
 }
 
 
