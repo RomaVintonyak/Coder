@@ -300,6 +300,38 @@ a:focus {
     }
 }
 
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
 .img {
     display: block;
     width: 100%;
@@ -359,6 +391,28 @@ a:focus {
 @media (max-width: 991px) {
     .mt-2 {
         margin-top: 1rem;
+    }
+}
+
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
 
@@ -460,6 +514,28 @@ a:focus {
 @media (max-width: 991px) {
     .mt-2 {
         margin-top: 1rem;
+    }
+}
+
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
 
@@ -690,6 +766,28 @@ a:focus {
     }
 }
 
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
 #footer {
     margin-bottom: 2rem;
 }
@@ -799,6 +897,28 @@ a:focus {
 @media (max-width: 991px) {
     .mt-2 {
         margin-top: 1rem;
+    }
+}
+
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
 
@@ -928,6 +1048,28 @@ a:focus {
 @media (max-width: 991px) {
     .mt-2 {
         margin-top: 1rem;
+    }
+}
+
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
 
@@ -1069,6 +1211,28 @@ a:focus {
 @media (max-width: 991px) {
     .mt-2 {
         margin-top: 1rem;
+    }
+}
+
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
 

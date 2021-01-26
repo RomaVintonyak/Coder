@@ -44,3 +44,19 @@
     margin-top: 1rem;
   }
 }
+/*animation for collum icon*/
+.border__icon{
+  border: 2px solid $red!important;
+  animation-name: blik;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+@keyframes blik{
+  0%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(0.8);
+  }
+}
