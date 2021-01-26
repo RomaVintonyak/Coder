@@ -1,0 +1,21 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+#price{
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.price__row{
+  width: calc(100% - 400px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
