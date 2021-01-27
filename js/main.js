@@ -86,4 +86,13 @@ jQuery(document).ready(function(){
           }
         }]
     });
+    /*lightbox seting*/
+    lightbox.option({
+      'resizeDuration': 500,
+      'wrapAround': true,
+      'fadeDuration': 1000,
+      'fitImagesInViewport': false,
+      'showImageNumberLabel': false,
+      'disableScrolling': true
+    });
 });
