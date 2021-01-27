@@ -51,4 +51,39 @@ jQuery(document).ready(function(){
     conceptIcon.removeClass("border__icon");
     designIcon.removeClass("border__icon");
   });
+    /*initialized slick slider to work block*/
+    var workSlider = $("#workSlider");
+    workSlider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: false,
+      arrows: false,
+      dots: true,
+      swipe: false,
+      touchMove: false,
+      focusOnSelect: false,
+      fade: false,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            fade: true,
+            swipe: true,
+            touchMove: true
+          }
+        }]
+    });
 });

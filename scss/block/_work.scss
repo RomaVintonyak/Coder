@@ -4,16 +4,45 @@
 @import "./help.scss";
 /*mixins*/
 @import "./mixin.scss";
-#work{
+#work {
   display: flex;
   width: 100%;
   max-height: 100vh;
   overflow: hidden;
 }
-.work__row{
+.work__row {
   width: calc(100% - 400px);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
+}
+.work__border {
+  border: 1px solid $silver;
+  position: relative;
+  width: 100%;
+  height: 90%;
+  &--2 {
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    border: 1px solid $silver;
+    position: relative;
+    padding: 50px;
+  }
+}
+.work__raper{
+  height: 100%;
+  width: 100%;
+  h3{
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $text;
+    span{
+      color: $blue;
+    }
+  }
 }
