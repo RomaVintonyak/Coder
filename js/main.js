@@ -95,4 +95,27 @@ jQuery(document).ready(function(){
       'showImageNumberLabel': false,
       'disableScrolling': true
     });
+    /*back to top scroll btn*/
+    var topBtn = $("#backTop");
+    topBtn.fadeOut(500);
+    var introScreen = $("#intro");
+    var firstScreenHeight = introScreen.height();
+    $(window).on("scroll", function(){
+      if($(this).scrollTop() > firstScreenHeight){
+        topBtn.fadeIn(500);
+        topBtn.css({
+          "bottom": 0
+        });
+      }else{
+        topBtn.fadeOut(500);
+        topBtn.css({
+          "bottom": -4 + "rem"
+        });
+      }
+    });
+    topBtn.on("click", function(){
+      $("html, body").animate({
+        scrollTop : 0
+      }, 1000);
+    });
 });

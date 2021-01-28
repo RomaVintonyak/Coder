@@ -1,0 +1,37 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+.back__top {
+  position: fixed;
+  bottom: -4rem;
+  right: 2%;
+  z-index: 10;
+  padding: 0.5rem;
+  background-color: $silver;
+  transition: bottom 0.4s ease;
+  i {
+    font-size: 1.5rem;
+    color: $white;
+  }
+  &:hover {
+    cursor: pointer;
+    i {
+      animation-name: blikButton;
+      animation-duration: 0.8s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+}
+@keyframes blikButton {
+  0% {
+    color: $white;
+  }
+  100% {
+    color: $red;
+  }
+}

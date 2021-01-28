@@ -38,6 +38,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -2108,6 +2112,142 @@ a:focus {
     top: 0;
     left: -2rem;
     z-index: 10;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text__left {
+    text-align: left;
+}
+
+.text__right {
+    text-align: right;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+@media (max-width: 991px) {
+    .mt-6 {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mt-6 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .mt-4 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+    .mt-2 {
+        margin-top: 1rem;
+    }
+}
+
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.back__top {
+    position: fixed;
+    bottom: -4rem;
+    right: 2%;
+    z-index: 10;
+    padding: 0.5rem;
+    background-color: #707172;
+    transition: bottom 0.4s ease;
+}
+
+.back__top i {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.back__top:hover {
+    cursor: pointer;
+}
+
+.back__top:hover i {
+    -webkit-animation-name: blikButton;
+    animation-name: blikButton;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes blikButton {
+    0% {
+        color: #ffffff;
+    }
+
+    100% {
+        color: #ee171f;
+    }
+}
+
+@keyframes blikButton {
+    0% {
+        color: #ffffff;
+    }
+
+    100% {
+        color: #ee171f;
+    }
 }
 
 .slick-slider {
