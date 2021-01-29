@@ -118,4 +118,60 @@ jQuery(document).ready(function(){
         scrollTop : 0
       }, 1000);
     });
+    /*relax script setings*/
+    var rellax = new Rellax('.rellax', {
+
+    });
+    /*mail validation script*/
+    var sendButton = $("#formButton");
+    var errorMessage = $("#errorMessage");
+    sendButton.on("click", function(){
+      var name = $("#formName").val().trim();
+      var lastName = $("#formLastName").val().trim();
+      var mail = $("#formEmail").val().trim(),
+          emailReg = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+      var phone = $("#formPhone").val().trim(),
+          intRegex =  /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+      var message = $("#formMessage").val().trim();
+      if (name.length < 4){
+        //var errorNameText = $("#errorName").text();
+        errorMessage.text("Enter your name");
+        return false;
+      }else if(lastName.length < 4){
+        //var errorLastText = $("#errorLast").text();
+        errorMessage.text("Enter your last name");
+        return false;
+      }else if(mail == "" || !emailReg.test(mail)){
+        //var errorMailText = $("#errorMail").text();
+        errorMessage.text("Enter your email");
+        return false;
+      }else if(phone.length < 6 || !intRegex.test(phone)){
+        //var errorPhoneText = $("#errorPhone").text();
+        errorMessage.text("Enter your phone number");
+        return false;
+      }else if(message.length < 10 ){
+        //var errorMessageText = $("#errorMessage").text();
+        errorMessage.text("Enter your message");
+        return false;
+      }
+      errorMessage.text("");
+      $.ajax({
+        url: '../php/mail.php',
+        type: 'POST',
+        cache: false,
+        data: {'name': name, 'lastName': lastName, 'phone': phone, 'mail': mail, 'message': message},
+        dataType: 'html',
+        beforeSend: function(){
+          sendButton.prop("disabled", true);
+        },
+        success: function(data){
+          if(!data)
+            alert("Something is wrong, try again");
+          else
+          $(".contact__form").trigger("reset");
+          alert(data);
+          sendButton.prop("disabled", false);
+        }
+      });
+    });
 });
