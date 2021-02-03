@@ -4,3 +4,132 @@
 @import "./help.scss";
 /*mixins*/
 @import "./mixin.scss";
+
+.intro__modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba($color: $blue, $alpha: 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--content {
+    width: 30%;
+    background-color: $white;
+    position: relative;
+    padding: 1rem;
+    p {
+      position: absolute;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      top: 5%;
+      right: 5%;
+      font-size: 2.5rem;
+      transition: transform 0.8s ease;
+      transform-origin: 50% 50%;
+      transform-style: preserve-3D;
+      perspective: 1000px;
+      &:hover {
+        cursor: pointer;
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+.modal__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+  h3 {
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: $text;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    span {
+      color: $blue;
+    }
+  }
+  input {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 0.8rem;
+    border: none;
+    padding: 0 0 0 0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $text;
+    border-bottom: 1px solid rgba($color: $silver, $alpha: 0.5);
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid rgba($color: $silver, $alpha: 1);
+    }
+  }
+  textarea{
+    width: 100%;
+    height: 5rem;
+    border: none;
+    padding: 0 0 0 0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $text;
+    resize: none;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba($color: $silver, $alpha: 0.5);
+    &:focus{
+      outline: none;
+      border-bottom: 1px solid rgba($color: $silver, $alpha: 1);
+    }
+  }
+  button{
+    width: 25%;
+    margin: 0 auto;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $text;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid $silver;
+    background-color: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    i{
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      color: $blue;
+      transition: color 0.2s ease;
+    }
+    &:focus{
+      outline: none;
+    }
+    &:hover{
+      cursor: pointer;
+      background-color: $silver;
+      color: $white;
+      i{
+        color: $white;
+      }
+    }
+    &:active{
+      transform: scale(0.95);
+    }
+  }
+}
+.modal__error{
+  font-family: inherit;
+  font-weight: 300;
+  color: $red;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  width: 100%;
+  height: 1rem;
+}

@@ -2375,6 +2375,154 @@ a:focus {
     }
 }
 
+.intro__modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 102, 153, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro__modal--content {
+    width: 30%;
+    background-color: #ffffff;
+    position: relative;
+    padding: 1rem;
+}
+
+.intro__modal--content p {
+    position: absolute;
+    -webkit-margin-before: 0;
+    margin-block-start: 0;
+    -webkit-margin-after: 0;
+    margin-block-end: 0;
+    top: 5%;
+    right: 5%;
+    font-size: 2.5rem;
+    transition: transform 0.8s ease;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3D;
+    perspective: 1000px;
+}
+
+.intro__modal--content p:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+.modal__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+}
+
+.modal__form h3 {
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.modal__form h3 span {
+    color: #069;
+}
+
+.modal__form input {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 0.8rem;
+    border: none;
+    padding: 0 0 0 0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #333333;
+    border-bottom: 1px solid rgba(112, 113, 114, 0.5);
+}
+
+.modal__form input:focus {
+    outline: none;
+    border-bottom: 1px solid #707172;
+}
+
+.modal__form textarea {
+    width: 100%;
+    height: 5rem;
+    border: none;
+    padding: 0 0 0 0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #333333;
+    resize: none;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(112, 113, 114, 0.5);
+}
+
+.modal__form textarea:focus {
+    outline: none;
+    border-bottom: 1px solid #707172;
+}
+
+.modal__form button {
+    width: 25%;
+    margin: 0 auto;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #333333;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #707172;
+    background-color: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal__form button i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: #069;
+    transition: color 0.2s ease;
+}
+
+.modal__form button:focus {
+    outline: none;
+}
+
+.modal__form button:hover {
+    cursor: pointer;
+    background-color: #707172;
+    color: #ffffff;
+}
+
+.modal__form button:hover i {
+    color: #ffffff;
+}
+
+.modal__form button:active {
+    transform: scale(0.95);
+}
+
+.modal__error {
+    font-family: inherit;
+    font-weight: 300;
+    color: #ee171f;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-align: left;
+    width: 100%;
+    height: 1rem;
+}
+
 .slick-slider {
     position: relative;
     display: flex;
