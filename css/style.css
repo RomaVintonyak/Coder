@@ -2382,10 +2382,17 @@ a:focus {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: rgba(0, 102, 153, 0.4);
+    background-color: rgba(112, 113, 114, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s ease, opacity 0.4s ease, visibility 0.2s ease;
 }
 
 .intro__modal--content {
@@ -2413,6 +2420,12 @@ a:focus {
 .intro__modal--content p:hover {
     cursor: pointer;
     transform: rotate(360deg);
+}
+
+.intro__modal--open {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal__form {
