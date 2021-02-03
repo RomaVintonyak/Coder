@@ -134,24 +134,24 @@ jQuery(document).ready(function(){
           intRegex =  /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
       var message = $("#formMessage").val().trim();
       if (name.length < 4){
-        //var errorNameText = $("#errorName").text();
-        errorMessage.text("Enter your name");
+        var errorNameText = $("#formName").attr("data-message");
+        errorMessage.text(errorNameText);
         return false;
       }else if(lastName.length < 4){
-        //var errorLastText = $("#errorLast").text();
-        errorMessage.text("Enter your last name");
+        var errorLastText = $("#formLastName").attr("data-message");
+        errorMessage.text(errorLastText);
         return false;
       }else if(mail == "" || !emailReg.test(mail)){
-        //var errorMailText = $("#errorMail").text();
-        errorMessage.text("Enter your email");
+        var errorMailText = $("#formEmail").attr("data-message");
+        errorMessage.text(errorMailText);
         return false;
       }else if(phone.length < 6 || !intRegex.test(phone)){
-        //var errorPhoneText = $("#errorPhone").text();
-        errorMessage.text("Enter your phone number");
+        var errorPhoneText = $("#formPhone").attr("data-message");
+        errorMessage.text(errorPhoneText);
         return false;
       }else if(message.length < 10 ){
-        //var errorMessageText = $("#errorMessage").text();
-        errorMessage.text("Enter your message");
+        var errorMessageText = $("#formMessage").attr("data-message");
+        errorMessage.text(errorMessageText);
         return false;
       }
       errorMessage.text("");
@@ -174,4 +174,5 @@ jQuery(document).ready(function(){
         }
       });
     });
+    /*show modal script*/
 });

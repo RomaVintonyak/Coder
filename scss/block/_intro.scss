@@ -64,3 +64,25 @@
     }
   }
 }
+.intro__btn{
+  border: 1px solid $white;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: rgba($white, 0.7);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: rgba($black, 0.5);
+    color: rgba($white, 1);
+  }
+  &:active{
+    transform: scale(0.95);
+  }
+}

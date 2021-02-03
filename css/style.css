@@ -42,6 +42,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -1003,6 +1007,32 @@ a:focus {
 
 .intro__content p:last-child {
     margin-bottom: 0;
+}
+
+.intro__btn {
+    border: 1px solid #ffffff;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.intro__btn:focus {
+    outline: none;
+}
+
+.intro__btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.intro__btn:active {
+    transform: scale(0.95);
 }
 
 .img {
@@ -2258,6 +2288,90 @@ a:focus {
 
     100% {
         color: #ee171f;
+    }
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text__left {
+    text-align: left;
+}
+
+.text__right {
+    text-align: right;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+@media (max-width: 991px) {
+    .mt-6 {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mt-6 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .mt-4 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+    .mt-2 {
+        margin-top: 1rem;
+    }
+}
+
+.border__icon {
+    border: 2px solid #ee171f !important;
+    -webkit-animation-name: blik;
+    animation-name: blik;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blik {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
 
