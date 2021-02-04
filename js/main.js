@@ -1,16 +1,15 @@
 /*preloader load*/
 const loader = $(".loader");
 $(window).on("load", function () {
+  $("html, body").css({
+    overflow: "hidden",
+  });
   setTimeout(function () {
     loader.addClass("loader--done");
-  }, 2500);
-  if (loader.hasClass("loader--done")) {
-    $("html, body").removeAttr("style");
-  } else {
-    $("html, body").css({
-      overflow: "hidden",
-    });
-  }
+    if (loader.hasClass("loader--done")) {
+      $("html, body").removeAttr("style");
+    }
+  }, 2000);
 });
 jQuery(document).ready(function () {
   "use script";
@@ -226,6 +225,8 @@ jQuery(document).ready(function () {
     var modalName = $("#modalIntroName").val().trim();
     var modalphone = $("#modalIntroPhone").val().trim(),
       modalIntRegex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+    var modalIntroSelect = $("#modalIntroSelect option:selected").val().trim();
+      console.log(modalIntroSelect);
     var modalMessage = $("#modalIntroQuestion").val().trim();
     if (modalName.length < 4) {
       var mErrorNameText = $("#modalIntroName").attr("data-message");
@@ -234,6 +235,10 @@ jQuery(document).ready(function () {
     } else if (modalphone.length < 6 || !modalIntRegex.test(modalphone)) {
       var mErrorPhoneText = $("#modalIntroPhone").attr("data-message");
       modalErrorMessage.text(mErrorPhoneText);
+      return false;
+    } else if(modalIntroSelect === 1){
+      var mErrorselectText = $("#modalIntroSelect").attr("data-message");
+      modalErrorMessage.text(mErrorselectText);
       return false;
     } else if (modalMessage.length < 14) {
       var mErrorMessageText = $("#modalIntroQuestion").attr("data-message");
@@ -248,6 +253,7 @@ jQuery(document).ready(function () {
       data: {
         modalName: modalName,
         modalphone: modalphone,
+        modalIntroSelect: modalIntroSelect,
         modalMessage: modalMessage,
       },
       dataType: "html",

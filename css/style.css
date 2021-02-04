@@ -2677,6 +2677,33 @@ a:focus {
     border-bottom: 1px solid #707172;
 }
 
+.modal__form select {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 0.8rem;
+    padding: 0 0 0 0.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #333333;
+    background: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(112, 113, 114, 0.5);
+}
+
+.modal__form select option {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #333333;
+}
+
+.modal__form select:focus {
+    outline: none;
+    border-bottom: 1px solid #707172;
+}
+
 .modal__form textarea {
     width: 100%;
     height: 5rem;

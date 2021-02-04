@@ -22,7 +22,7 @@
   perspective: 1000px;
   opacity: 0;
   visibility: hidden;
-  transition: transform 1s ease, opacity 0.4s ease, visibility 0.2s ease; 
+  transition: transform 1s ease, opacity 0.4s ease, visibility 0.2s ease;
   &--content {
     width: 30%;
     background-color: $white;
@@ -45,10 +45,10 @@
       }
     }
   }
-  &--open{
+  &--open {
     transform: scale(1);
     opacity: 1;
-    visibility: visible; 
+    visibility: visible;
   }
 }
 .modal__form {
@@ -83,7 +83,31 @@
       border-bottom: 1px solid rgba($color: $silver, $alpha: 1);
     }
   }
-  textarea{
+  select {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 0.8rem;
+    padding: 0 0 0 0.5rem;
+    font-family: $font;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $text;
+    background: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba($color: $silver, $alpha: 0.5);
+    option {
+      font-family: $font;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: $text;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid rgba($color: $silver, $alpha: 1);
+    }
+  }
+  textarea {
     width: 100%;
     height: 5rem;
     border: none;
@@ -95,12 +119,12 @@
     resize: none;
     margin-bottom: 0.8rem;
     border-bottom: 1px solid rgba($color: $silver, $alpha: 0.5);
-    &:focus{
+    &:focus {
       outline: none;
       border-bottom: 1px solid rgba($color: $silver, $alpha: 1);
     }
   }
-  button{
+  button {
     width: 25%;
     margin: 0 auto;
     font-family: inherit;
@@ -113,29 +137,29 @@
     border-bottom: 1px solid $silver;
     background-color: transparent;
     transition: background-color 0.2s ease, color 0.2s ease;
-    i{
+    i {
       margin-right: 0.5rem;
       font-size: 1.2rem;
       color: $blue;
       transition: color 0.2s ease;
     }
-    &:focus{
+    &:focus {
       outline: none;
     }
-    &:hover{
+    &:hover {
       cursor: pointer;
       background-color: $silver;
       color: $white;
-      i{
+      i {
         color: $white;
       }
     }
-    &:active{
+    &:active {
       transform: scale(0.95);
     }
   }
 }
-.modal__error{
+.modal__error {
   font-family: inherit;
   font-weight: 300;
   color: $red;
