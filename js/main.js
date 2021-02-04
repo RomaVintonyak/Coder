@@ -1,3 +1,17 @@
+/*preloader load*/
+const loader = $(".loader");
+$(window).on("load", function () {
+  setTimeout(function () {
+    loader.addClass("loader--done");
+  }, 2500);
+  if (loader.hasClass("loader--done")) {
+    $("html, body").removeAttr("style");
+  } else {
+    $("html, body").css({
+      overflow: "hidden",
+    });
+  }
+});
 jQuery(document).ready(function () {
   "use script";
   /*smoth scroll to section*/
@@ -211,7 +225,7 @@ jQuery(document).ready(function () {
   modalsendButton.on("click", function () {
     var modalName = $("#modalIntroName").val().trim();
     var modalphone = $("#modalIntroPhone").val().trim(),
-        modalIntRegex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+      modalIntRegex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
     var modalMessage = $("#modalIntroQuestion").val().trim();
     if (modalName.length < 4) {
       var mErrorNameText = $("#modalIntroName").attr("data-message");

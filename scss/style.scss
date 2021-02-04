@@ -45,6 +45,8 @@ a {
 @import "./mixin.scss";
 /*=================================*/
 /*block*/
+/*preloader*/
+@import "block/preloader.scss";
 /*container*/
 @import "block/container.scss";
 /*sidebar*/
