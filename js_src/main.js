@@ -268,4 +268,24 @@ jQuery(document).ready(function () {
       },
     });
   });
+  /*vanta init*/
+  VANTA.BIRDS({
+    el: "#vantaefect",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    backgroundColor: 0xffffff,
+    color1: 0xff0f0f,
+    color2: 0x168cde,
+    birdSize: 0.50,
+    wingSpan: 10.00,
+    separation: 1.00,
+    alignment: 1.00,
+    cohesion: 1.00,
+    quantity: 3.00
+  });
 });
