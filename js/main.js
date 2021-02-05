@@ -236,7 +236,7 @@ jQuery(document).ready(function () {
       var mErrorPhoneText = $("#modalIntroPhone").attr("data-message");
       modalErrorMessage.text(mErrorPhoneText);
       return false;
-    } else if(modalIntroSelect === 1){
+    } else if(modalIntroSelect === "1"){
       var mErrorselectText = $("#modalIntroSelect").attr("data-message");
       modalErrorMessage.text(mErrorselectText);
       return false;
