@@ -278,14 +278,15 @@ jQuery(document).ready(function () {
     minWidth: 200.00,
     scale: 1.00,
     scaleMobile: 1.00,
-    backgroundColor: 0xffffff,
-    color1: 0xff0f0f,
-    color2: 0x168cde,
+    backgroundColor: 0xbebebe,
+    color1: 0xee171f,
+    color2: 0x069,
     birdSize: 0.50,
-    wingSpan: 10.00,
-    separation: 1.00,
-    alignment: 1.00,
-    cohesion: 1.00,
-    quantity: 3.00
+    speedLimit: 6.00,
+    separation: 45.00,
+    alignment: 45.00,
+    cohesion: 45.00,
+    quantity: 3.00,
+    backgroundAlpha: 0.1,
   });
 });
