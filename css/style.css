@@ -779,6 +779,28 @@ a:focus {
     width: 400px;
     max-width: 400px;
     background-color: rgba(179, 179, 179, 0.5);
+    transition: left 0.4S linear, background-color 0.2s linear;
+}
+
+@media (max-width: 991px) {
+    .main__sidebar {
+        left: -400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main__sidebar {
+        padding-left: 10px;
+        padding-right: 10px;
+        left: -275px;
+        width: 275px;
+        max-width: 275px;
+    }
+}
+
+.main__sidebar--open {
+    left: 0;
+    background-color: rgba(179, 179, 179, 0.9);
 }
 
 .sidebar__button {
@@ -806,6 +828,12 @@ a:focus {
     background-color: #b3b3b3;
 }
 
+@media (max-width: 991px) {
+    .sidebar__button {
+        display: block;
+    }
+}
+
 .sidebar__content {
     width: 100%;
     height: 100%;
@@ -813,6 +841,12 @@ a:focus {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 991px) {
+    .sidebar__content {
+        overflow-y: scroll;
+    }
 }
 
 .nav__brand {
@@ -850,6 +884,18 @@ a:focus {
     color: #ffffff;
 }
 
+@media (max-width: 1366px) {
+    .nav__brand {
+        margin: 40px auto 60px;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav__brand {
+        margin: 20px auto 40px;
+    }
+}
+
 .nav__menu {
     margin: 0;
     padding: 0;
@@ -861,6 +907,12 @@ a:focus {
 .nav__item {
     width: 75%;
     margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav__item {
+        margin-bottom: 1rem;
+    }
 }
 
 .nav__item:last-child {
@@ -1021,6 +1073,18 @@ a:focus {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+    #footer {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer {
+        margin-bottom: 0.5rem;
+    }
+}
+
 .footer__button {
     width: 100%;
     display: flex;
@@ -1169,7 +1233,7 @@ a:focus {
     left: 0;
     z-index: 2;
     opacity: 0.6;
-    background: #E0E3E3;
+    background: #e0e3e3;
     background: linear-gradient(225deg, #e3e3e3 31%, #38575e 67%, #9398a1);
 }
 
@@ -1206,6 +1270,26 @@ a:focus {
     color: #ffffff;
 }
 
+@media (max-width: 576px) {
+    .intro__content h2 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro__content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .intro__content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+}
+
 .intro__content p {
     font-family: inherit;
     font-size: 1.2rem;
@@ -1214,8 +1298,63 @@ a:focus {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 576px) {
+    .intro__content p {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro__content p {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro__content p {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+}
+
 .intro__content p:last-child {
     margin-bottom: 0;
+}
+
+@media (max-width: 1366px) {
+    .intro__content {
+        max-width: 50%;
+        right: 5%;
+        top: 10%;
+    }
+}
+
+@media (max-width: 991px) {
+    .intro__content {
+        max-width: 80%;
+        padding: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__content {
+        max-width: 95%;
+        right: 2%;
+        top: 2%;
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro__content {
+        text-align: right;
+        max-width: 100%;
+        top: 1%;
+        right: 1%;
+        left: 1%;
+        padding: 0.5rem;
+    }
 }
 
 .intro__btn {
@@ -2722,6 +2861,30 @@ a:focus {
     transform: rotate(360deg);
 }
 
+@media (max-width: 1366px) {
+    .intro__modal--content {
+        width: 40%;
+    }
+}
+
+@media (max-width: 991px) {
+    .intro__modal--content {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__modal--content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro__modal--content {
+        width: 95%;
+    }
+}
+
 .intro__modal--open {
     transform: scale(1);
     opacity: 1;
@@ -2850,6 +3013,12 @@ a:focus {
 
 .modal__form button:active {
     transform: scale(0.95);
+}
+
+@media (max-width: 576px) {
+    .modal__form button {
+        width: 35%;
+    }
 }
 
 .modal__error {

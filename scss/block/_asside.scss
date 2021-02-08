@@ -16,6 +16,21 @@
   width: 400px;
   max-width: 400px;
   background-color: rgba($color: #b3b3b3, $alpha: 0.5);
+  transition: left 0.4S linear, background-color 0.2s linear;
+  @include tablet{
+    left: -400px;
+  }
+  @include mobile-sm{
+    padding-left: 10px;
+    padding-right: 10px;
+    left: -275px;
+    width: 275px;
+    max-width: 275px;
+  }
+  &--open{
+    left: 0;
+    background-color: rgba($color: #b3b3b3, $alpha: 0.9);
+  }
 }
 .sidebar__button {
   outline: none;
@@ -38,6 +53,9 @@
     cursor: pointer;
     background-color: rgba($color: #b3b3b3, $alpha: 1);
   }
+  @include tablet{
+    display: block;
+  }
 }
 .sidebar__content {
   width: 100%;
@@ -46,6 +64,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @include tablet{
+   overflow-y: scroll;
+  }
 }
 .nav__brand {
   box-sizing: content-box;
@@ -77,6 +98,12 @@
       }
     }
   }
+  @include notebook{
+    margin: 40px auto 60px;
+  }
+  @include tablet{
+    margin: 20px auto 40px;
+  }
 }
 .nav__menu{
   margin: 0;
@@ -88,6 +115,9 @@
 .nav__item{
   width: 75%;
   margin-bottom: 1.5rem;
+  @include mobile{
+    margin-bottom: 1rem;
+  }
   &:last-child{
     margin-bottom: 0;
   }

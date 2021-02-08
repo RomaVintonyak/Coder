@@ -25,6 +25,7 @@ jQuery(document).ready(function () {
       },
       800
     );
+    $("#sideBar").removeClass("main__sidebar--open");
   });
   /*menuScroll add class*/
   $("#menuScroll").singlePageNav({
@@ -288,5 +289,11 @@ jQuery(document).ready(function () {
     cohesion: 45.00,
     quantity: 3.00,
     backgroundAlpha: 0.1,
+  });
+  /*mobile  menu*/
+  var assideBtn = $("#asideButton");
+  assideBtn.on("click", function(event){
+    event.preventDefault();
+    $("#sideBar").toggleClass("main__sidebar--open");
   });
 });

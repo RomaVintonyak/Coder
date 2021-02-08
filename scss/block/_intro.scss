@@ -21,8 +21,13 @@
     left: 0;
     z-index: 2;
     opacity: 0.6;
-    background: #E0E3E3;
-    background: linear-gradient(225deg, rgb(227, 227, 227) 31%, rgb(56, 87, 94) 67%, rgb(147, 152, 161));
+    background: #e0e3e3;
+    background: linear-gradient(
+      225deg,
+      rgb(227, 227, 227) 31%,
+      rgb(56, 87, 94) 67%,
+      rgb(147, 152, 161)
+    );
   }
 }
 .intro__video {
@@ -52,6 +57,17 @@
     font-weight: 400;
     margin-bottom: 2rem;
     color: $white;
+    @include mobile-sm {
+      margin-bottom: 1rem;
+    }
+    @include mobile-xsm{
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+    @include mobile-xxsm{
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
   }
   p {
     font-family: inherit;
@@ -59,12 +75,46 @@
     font-weight: 400;
     color: $white;
     margin-bottom: 2rem;
+    @include mobile-sm {
+      margin-bottom: 1rem;
+    }
+    @include mobile-xsm{
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    @include mobile-xsm{
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
     &:last-child {
       margin-bottom: 0;
     }
   }
+  @include notebook {
+    max-width: 50%;
+    right: 5%;
+    top: 10%;
+  }
+  @include tablet {
+    max-width: 80%;
+    padding: 4rem;
+  }
+  @include mobile {
+    max-width: 95%;
+    right: 2%;
+    top: 2%;
+    padding: 2.5rem;
+  }
+  @include mobile-sm {
+    text-align: right;
+    max-width: 100%;
+    top: 1%;
+    right: 1%;
+    left: 1%;
+    padding: 0.5rem;
+  }
 }
-.intro__btn{
+.intro__btn {
   border: 1px solid $white;
   padding: 0.5rem 1.5rem;
   background-color: transparent;
@@ -74,15 +124,15 @@
   font-weight: 300;
   color: rgba($white, 0.7);
   transition: color 0.2s ease, background-color 0.2s ease;
-  &:focus{
+  &:focus {
     outline: none;
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
     background-color: rgba($black, 0.5);
     color: rgba($white, 1);
   }
-  &:active{
+  &:active {
     transform: scale(0.95);
   }
 }

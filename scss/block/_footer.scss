@@ -7,6 +7,12 @@
 
 #footer{
   margin-bottom: 2rem;
+  @include mobile{
+    margin-bottom: 1rem;
+  }
+  @include mobile-sm{
+    margin-bottom: 0.5rem;
+  }
 }
 .footer__button{
   width: 100%;
