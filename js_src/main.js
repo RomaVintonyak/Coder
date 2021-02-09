@@ -270,7 +270,7 @@ jQuery(document).ready(function () {
     });
   });
   /*vanta init*/
-  VANTA.BIRDS({
+  /*VANTA.BIRDS({
     el: "#vantaefect",
     mouseControls: true,
     touchControls: true,
@@ -289,7 +289,7 @@ jQuery(document).ready(function () {
     cohesion: 45.00,
     quantity: 3.00,
     backgroundAlpha: 0.1,
-  });
+  });*/
   /*mobile  menu*/
   var assideBtn = $("#asideButton");
   assideBtn.on("click", function(event){
