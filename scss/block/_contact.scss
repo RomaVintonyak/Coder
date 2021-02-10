@@ -9,6 +9,10 @@
   width: 100%;
   max-height: 100vh;
   overflow: hidden;
+  @include mobile{
+    overflow: scroll;
+    max-height: 300vh;
+  }
 }
 .contact__row {
   width: calc(100% - 400px);
@@ -17,6 +21,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @include tablet{
+    width: 100%;
+  }
+  @include mobile{
+    height: auto;
+  }
 }
 .contact__title {
   margin-bottom: 2rem;
@@ -25,12 +35,39 @@
     font-size: 2.6rem;
     font-weight: 500;
     color: $text;
+    @include notebook{
+      font-size: 2.2rem;
+    }
+    @include tablet{
+      font-size: 1.8rem;
+    }
+    @include mobile{
+      font-size: 1.6rem;
+    }
+    @include mobile-sm{
+      font-size: 1.4rem;
+    }
   }
   p {
     font-family: inherit;
     font-size: 1.6rem;
     font-weight: 400;
     color: $text;
+    @include tablet{
+      font-size: 1.4rem;
+    }
+    @include mobile{
+      font-size: 1.2rem;
+    }
+    @include mobile-sm{
+      font-size: 1rem;
+    }
+  }
+  @include mobile{
+    margin-bottom: 1rem;
+  }
+  @include mobile-sm{
+    margin-bottom: 0.7rem;
   }
 }
 .contact__content {
@@ -38,6 +75,10 @@
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
+  @include mobile{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .content__text {
   width: 45%;
@@ -49,6 +90,10 @@
       font-weight: 500;
       color: $text;
       margin-bottom: 1.5rem;
+      @include mobile{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
     }
     p {
       i {
@@ -61,6 +106,14 @@
       font-weight: 400;
       color: $text;
       margin-bottom: 1rem;
+      @include mobile{
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+      }
+      @include mobile-sm{
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -75,6 +128,9 @@
       bottom: -1.5rem;
       left: 0;
       z-index: 2;
+      @include mobile{
+        bottom: -1rem;
+      }
     }
   }
   &--description{
@@ -85,13 +141,29 @@
       font-weight: 500;
       color: $text;
       margin-bottom: 1.5rem;
+      @include mobile{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
     }
     p{
       font-family: inherit;
       font-size: 1.3rem;
       font-weight: 400;
       color: $text;
+      @include mobile{
+        font-size: 1.2rem;
+      }
+      @include mobile-sm{
+        font-size: 1rem;
+      }
     }
+    @include mobile{
+      margin-top: 2rem; 
+    }
+  }
+  @include mobile{
+    width: 95%; 
   }
 }
 .contact__form {
@@ -178,6 +250,16 @@
     top: 0;
     left: -2rem;
     z-index: 10;
+    @include notebook{
+      left: -1rem;
+    }
+    @include mobile{
+      display: none;
+    }
+  }
+  @include mobile{
+    width: 95%;
+    margin-top: 2rem;
   }
 }
 .form__error{

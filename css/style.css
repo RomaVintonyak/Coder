@@ -2750,6 +2750,13 @@ a:focus {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    #contact {
+        overflow: scroll;
+        max-height: 300vh;
+    }
+}
+
 .contact__row {
     width: calc(100% - 400px);
     height: 100vh;
@@ -2757,6 +2764,18 @@ a:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+@media (max-width: 991px) {
+    .contact__row {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__row {
+        height: auto;
+    }
 }
 
 .contact__title {
@@ -2770,6 +2789,30 @@ a:focus {
     color: #333333;
 }
 
+@media (max-width: 1366px) {
+    .contact__title h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact__title h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__title h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact__title h3 {
+        font-size: 1.4rem;
+    }
+}
+
 .contact__title p {
     font-family: inherit;
     font-size: 1.6rem;
@@ -2777,11 +2820,48 @@ a:focus {
     color: #333333;
 }
 
+@media (max-width: 991px) {
+    .contact__title p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__title p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact__title p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__title {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact__title {
+        margin-bottom: 0.7rem;
+    }
+}
+
 .contact__content {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .contact__content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .content__text {
@@ -2800,6 +2880,13 @@ a:focus {
     margin-bottom: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .content__text--contact h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
 .content__text--contact p {
     font-family: inherit;
     font-size: 1.3rem;
@@ -2812,6 +2899,20 @@ a:focus {
     color: #069;
     font-size: 1.3rem;
     margin-right: 0.7rem;
+}
+
+@media (max-width: 768px) {
+    .content__text--contact p {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .content__text--contact p {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
 }
 
 .content__text--contact p:last-child {
@@ -2830,6 +2931,12 @@ a:focus {
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    .content__text--contact::after {
+        bottom: -1rem;
+    }
+}
+
 .content__text--description {
     margin-top: 3rem;
 }
@@ -2842,11 +2949,42 @@ a:focus {
     margin-bottom: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .content__text--description h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
 .content__text--description p {
     font-family: inherit;
     font-size: 1.3rem;
     font-weight: 400;
     color: #333333;
+}
+
+@media (max-width: 768px) {
+    .content__text--description p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .content__text--description p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content__text--description {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content__text {
+        width: 95%;
+    }
 }
 
 .contact__form {
@@ -2946,6 +3084,25 @@ a:focus {
     top: 0;
     left: -2rem;
     z-index: 10;
+}
+
+@media (max-width: 1366px) {
+    .contact__form::before {
+        left: -1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__form::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__form {
+        width: 95%;
+        margin-top: 2rem;
+    }
 }
 
 .form__error {

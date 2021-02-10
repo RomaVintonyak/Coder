@@ -271,7 +271,7 @@ jQuery(document).ready(function () {
     });
   });
   /*vanta init*/
-  /*VANTA.NET({
+  VANTA.NET({
     el: "#vantaefect",
     mouseControls: true,
     touchControls: true,
@@ -286,7 +286,7 @@ jQuery(document).ready(function () {
     maxDistance: 22.00,
     spacing: 20.00,
     showDots: false
-  });*/
+  });
   /*mobile  menu*/
   var assideBtn = $("#asideButton");
   assideBtn.on("click", function(event){
