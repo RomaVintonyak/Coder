@@ -82,21 +82,22 @@ jQuery(document).ready(function () {
     fade: false,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1366,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 767,
+        breakpoint: 991,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 767,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          dots: false,
           fade: true,
           swipe: true,
           touchMove: true,
@@ -109,7 +110,7 @@ jQuery(document).ready(function () {
     resizeDuration: 500,
     wrapAround: true,
     fadeDuration: 1000,
-    fitImagesInViewport: false,
+    fitImagesInViewport: true,
     showImageNumberLabel: false,
     disableScrolling: true,
   });
@@ -270,7 +271,7 @@ jQuery(document).ready(function () {
     });
   });
   /*vanta init*/
-  /*VANTA.BIRDS({
+  /*VANTA.NET({
     el: "#vantaefect",
     mouseControls: true,
     touchControls: true,
@@ -279,16 +280,12 @@ jQuery(document).ready(function () {
     minWidth: 200.00,
     scale: 1.00,
     scaleMobile: 1.00,
-    backgroundColor: 0xbebebe,
-    color1: 0xee171f,
-    color2: 0x069,
-    birdSize: 0.50,
-    speedLimit: 6.00,
-    separation: 45.00,
-    alignment: 45.00,
-    cohesion: 45.00,
-    quantity: 3.00,
-    backgroundAlpha: 0.1,
+    color: 0x707172,
+    backgroundColor: 0xf6f6f6,
+    points: 4.00,
+    maxDistance: 22.00,
+    spacing: 20.00,
+    showDots: false
   });*/
   /*mobile  menu*/
   var assideBtn = $("#asideButton");

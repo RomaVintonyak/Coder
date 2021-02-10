@@ -2479,6 +2479,12 @@ a:focus {
     padding: 0 1rem;
 }
 
+@media (max-width: 991px) {
+    .work__row {
+        width: 100%;
+    }
+}
+
 .work__border {
     border: 1px solid #707172;
     position: relative;
@@ -2510,6 +2516,12 @@ a:focus {
 
 .work__raper h3 span {
     color: #069;
+}
+
+@media (max-width: 768px) {
+    .work__raper h3 {
+        font-size: 1.4rem;
+    }
 }
 
 .work__effect {
@@ -2579,12 +2591,38 @@ a:focus {
     transform: translate3d(0, -20px, 0);
 }
 
+@media (max-width: 1366px) {
+    .work__effect figcaption h2 {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 576px) {
+    .work__effect figcaption h2 {
+        font-size: 1.1rem;
+    }
+}
+
 .work__effect figcaption p {
     width: 100%;
     padding: 10px;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(0, 20px, 0);
+}
+
+@media (max-width: 1366px) {
+    .work__effect figcaption p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 576px) {
+    .work__effect figcaption p {
+        font-size: 0.8rem;
+    }
 }
 
 .work__effect figcaption a {
