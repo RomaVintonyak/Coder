@@ -293,4 +293,6 @@ jQuery(document).ready(function () {
     event.preventDefault();
     $("#sideBar").toggleClass("main__sidebar--open");
   });
+  /*aos animation*/
+  AOS.init();
 });

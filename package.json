@@ -26,5 +26,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-strip-css-comments": "^2.0.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
   }
 }
