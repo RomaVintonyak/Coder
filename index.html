@@ -138,7 +138,7 @@
           <p>
             We work for the result &mdash; quickly, efficiently, modernl.
           </p>
-          <button type="button" id="askBtn" class="intro__btn">Ask Us</button>
+          <button type="button" id="askBtn" class="intro__btn">Write Brief</button>
         </div><!--/.intro__content-->
       </div><!--/.intro__row-->
     </section><!--/.intro-->
@@ -445,18 +445,77 @@
     <div class="intro__modal--content">
       <p id="introModalClose">&Cross;</p>
       <form action="#" class="modal__form text__center" id="modalForm">
-        <h3>Ask <span>Us</span></h3>
-        <input type="text" id="modalIntroName" placeholder="Your name" data-message="Enter your name">
-        <input type="tel" id="modalIntroPhone" placeholder="Your phone" data-message="Enter your phone number">
-        <select size="1" name="modalSelect" id="modalIntroSelect" data-message="Please select site types">
-          <option value="1">Chose site type</option>
-          <option value="Landing">Landing</option>
-          <option value="Blog">Blog</option>
-          <option value="Shop">Shop</option>
-          <option value="Card">Card</option>
-          <option value="Other">Other</option>
-        </select>
-        <textarea id="modalIntroQuestion" placeholder="Write your question" data-message="Enter your question"></textarea>
+        <h3>Заповніть <span>Бриф</span></h3>
+        <h4>Що таке бриф?</h4>
+        <h5>
+          <b>Бриф</b>&mdash;це анкета, яка включає список основних вимог, та інформації про майбутній сайт,
+          на основі якої робиться попередня оцінка бюджету та термінів виконання замовлення.
+        </h5>
+        <div class="main__information">
+          <h5>Контактна інформація</h5>
+          <input type="text" id="mainName" placeholder="Ваше ПІБ:" data-message="Enter your name">
+          <input type="text" id="mainOrganisation" placeholder="Назва організації:" data-message="Enter your organisation name">
+          <input type="text" id="mainMail" placeholder="Електронна пошта:" data-message="Enter your email">
+          <input type="tel" id="mainPhone" placeholder="Контактний телефон" data-message="Enter your phone number">
+        </div><!--/.main__information-->
+        <div class="company__information">
+          <h5>Інформація про компанію</h5>
+          <input type="url" id="companyUrl" placeholder="URL сайта, якщо вибрано:" data-message="Enter URL">
+          <input type="text" id="companyServicess" placeholder="Область діяльності:" data-message="Enter your servicess">
+          <input type="text" id="companyMission" placeholder="Місія, та цілі:" data-message="Enter your mission">
+          <input type="text" id="companyAdvantages" placeholder="Ваші переваги" data-message="Enter your advanteges">
+        </div><!--/.company__information-->
+        <div class="target__information">
+          <h5>Цілі створення сайту</h5>
+          <textarea id="targetTask" placeholder="Які завдання повинен вирішувати Ваш майбутній сайт і яких результатів Ви б хотіли досягти?" data-message="Enter your messages task"></textarea>
+          <textarea id="targetUseful" placeholder="Чим Ваш сайт буде корисний для Ваших клієнтів? Що більш за все вони оцінять у Вашому продукті/послузі?" data-message="Enter your userfull text"></textarea>
+          <textarea id="targetAction" placeholder="Які дії повинен виконати відвідувач на Вашому сайті, щоби ви вважали що все пройшло успішно?" data-message="Enter your action message"></textarea>
+        </div><!--/.target__information-->
+        <div class="type__information">
+          <h5>Тип сайту</h5>
+          <select size="1" name="modalSelect" id="modalIntroSelect" data-message="Please select site types">
+            <option value="1">Виберіть із випадаючого списку бажаний тип сайту</option>
+            <option value="Landing">Односторінковий веб сайт</option>
+            <option value="Blog">Блог</option>
+            <option value="Shop">Інтернет магазин</option>
+            <option value="Card">Сайт візитка</option>
+            <option value="Portfolio">Сайт портфоліо</option>
+            <option value="Other">Інше...(Обговоримо індивідуально)</option>
+          </select>
+        </div><!--/.type__information-->
+        <div class="design__information">
+          <h5>Дизайн сайту</h5>
+          <textarea id="designUrl" placeholder="Вкажіть посилання на сайти, які Вам подобаються" 
+          data-message="Enter your design url"></textarea>
+          <textarea id="designColor" placeholder="Які б кольори Ви б хотіли використовувати у дизайні сайту" 
+          data-message="Enter your color design"></textarea>
+          <textarea id="designWishes" placeholder="Додаткові побажання до дизайну сайту в цілому" 
+          data-message="Enter your wishes design"></textarea>
+          <h6>
+            Необхідна розробка індивідуального дизайну (з нуля),
+            або розглядаєте розробку сайту на основі готового дизайну (на вибір)?
+          </h6>
+          <h6>
+            Важливо розуміти, готовий дизайн (шаблон) це мінус. Більшість компаній, для зменшення бюджету розробки,
+            використовують шаблони. Так як у теперішній час преміум шаблони не поступаються по якості індивідуальному дизайну сайту,
+            тільки у тому випадку коли відповідним чином налаштувати шаблон та наповнити його унікальною інформацією.
+            Другий плюс у тому що замовник бачить різні варіанти, та має можливість вибору, у випадку індивідуального дизайну такої можливості немає.
+            Тим не менше, у шаблонів є ряд обмежень, у плані корегування зовнішнього вигляду. Цей момент ми обговорюємо індивідуально. 
+          </h6>
+          <h6>
+            Даний пункт сутєво впливає на кінцеву вартість проекту.
+          </h6>
+          <div class="design__information--radio">
+            <div class="radio__items">
+              <label for="finishedDesign">Готовий дизайн</label>
+              <input type="radio" id="finishedDesign" name="choseDesign" value="Готовий дизайн">
+            </div>
+            <div class="radio__items">
+              <label for="individualDesign">Індивідуальний дизайн</label>
+              <input type="radio" id="individualDesign" name="choseDesign" value="Індивідуальний дизайн"> 
+            </div>
+          </div>
+        </div><!--/.design__information-->
         <button type="button" id="modalIntroButton"><i class="fas fa-question"></i>ask</button>
         <h6 class="modal__error" id="modalErrorMessage"></h6>
       </form>

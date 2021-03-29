@@ -23,11 +23,15 @@
   opacity: 0;
   visibility: hidden;
   transition: transform 1s ease, opacity 0.4s ease, visibility 0.2s ease;
+  overflow-y: scroll;
   &--content {
-    width: 30%;
+    width: 60%;
     background-color: $white;
     position: relative;
     padding: 1rem;
+    position: absolute;
+    top: 0;
+    z-index: 100;
     p {
       position: absolute;
       margin-block-start: 0;
@@ -45,13 +49,13 @@
       }
     }
     @include notebook{
-      width: 40%;
+      width: 65%;
     }
     @include tablet{
-      width: 50%;
+      width: 75%;
     }
     @include mobile{
-      width: 80%;
+      width: 85%;
     }
     @include mobile-sm{
       width: 95%;

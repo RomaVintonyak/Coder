@@ -3354,13 +3354,17 @@ a:focus {
     opacity: 0;
     visibility: hidden;
     transition: transform 1s ease, opacity 0.4s ease, visibility 0.2s ease;
+    overflow-y: scroll;
 }
 
 .intro__modal--content {
-    width: 30%;
+    width: 60%;
     background-color: #ffffff;
     position: relative;
     padding: 1rem;
+    position: absolute;
+    top: 0;
+    z-index: 100;
 }
 
 .intro__modal--content p {
@@ -3385,19 +3389,19 @@ a:focus {
 
 @media (max-width: 1366px) {
     .intro__modal--content {
-        width: 40%;
+        width: 65%;
     }
 }
 
 @media (max-width: 991px) {
     .intro__modal--content {
-        width: 50%;
+        width: 75%;
     }
 }
 
 @media (max-width: 768px) {
     .intro__modal--content {
-        width: 80%;
+        width: 85%;
     }
 }
 
