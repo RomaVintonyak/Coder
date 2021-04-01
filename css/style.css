@@ -3373,7 +3373,7 @@ a:focus {
     margin-block-start: 0;
     -webkit-margin-after: 0;
     margin-block-end: 0;
-    top: 5%;
+    top: 1%;
     right: 5%;
     font-size: 2.5rem;
     transition: transform 0.8s ease;
@@ -3431,13 +3431,34 @@ a:focus {
     font-weight: 500;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .modal__form h3 span {
     color: #069;
 }
 
-.modal__form input {
+.modal__form h4 {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+
+.modal__form h5 {
+    font-family: inherit;
+    font-size: 0.7rem;
+    color: #333333;
+    font-weight: 500;
+}
+
+.modal__form div {
+    margin-top: 1.5rem;
+}
+
+.modal__form div input {
     width: 100%;
     height: 2.5rem;
     margin-bottom: 0.8rem;
@@ -3450,12 +3471,12 @@ a:focus {
     border-bottom: 1px solid rgba(112, 113, 114, 0.5);
 }
 
-.modal__form input:focus {
+.modal__form div input:focus {
     outline: none;
     border-bottom: 1px solid #707172;
 }
 
-.modal__form select {
+.modal__form div select {
     width: 100%;
     height: 2.5rem;
     margin-bottom: 0.8rem;
@@ -3470,19 +3491,19 @@ a:focus {
     border-bottom: 1px solid rgba(112, 113, 114, 0.5);
 }
 
-.modal__form select option {
+.modal__form div select option {
     font-family: "Ubuntu", sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
     color: #333333;
 }
 
-.modal__form select:focus {
+.modal__form div select:focus {
     outline: none;
     border-bottom: 1px solid #707172;
 }
 
-.modal__form textarea {
+.modal__form div textarea {
     width: 100%;
     height: 5rem;
     border: none;
@@ -3496,7 +3517,7 @@ a:focus {
     border-bottom: 1px solid rgba(112, 113, 114, 0.5);
 }
 
-.modal__form textarea:focus {
+.modal__form div textarea:focus {
     outline: none;
     border-bottom: 1px solid #707172;
 }
@@ -3556,6 +3577,77 @@ a:focus {
     text-align: left;
     width: 100%;
     height: 1rem;
+}
+
+.main__information h5 {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.company__information h5 {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.target__information h5 {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.type__information h5 {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.design__information h5 {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.design__information h6 {
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.7rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.design__information h6:nth-child(3) {
+    margin-bottom: 0;
+}
+
+.design__information--radio {
+    margin-top: 1rem !important;
+}
+
+.design__information--radio .radio__items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem !important;
+}
+
+.design__information--radio .radio__items input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 0;
+    margin-right: 1rem;
 }
 
 .slick-slider {
