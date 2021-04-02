@@ -224,29 +224,151 @@ jQuery(document).ready(function () {
   var modalsendButton = $("#modalIntroButton");
   var modalErrorMessage = $("#modalErrorMessage");
   modalsendButton.on("click", function () {
-    var modalName = $("#modalIntroName").val().trim();
-    var modalphone = $("#modalIntroPhone").val().trim(),
-      modalIntRegex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+    /*contact information*/
+    var mainName = $("#mainName").val().trim();
+    var mainOrganisation = $("#mainOrganisation").val().trim();
+    var mainMail = $("#mainMail").val().trim(),
+        mainMaillReg = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+    var mainPhone = $("#mainPhone").val().trim(),
+        mainPhoneIntRegex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+    /*company information*/
+    var companyUrl = $("#companyUrl").val().trim();
+    var companyServicess = $("#companyServicess").val().trim();
+    var companyMission = $("#companyMission").val().trim();
+    var companyAdvantages = $("#companyAdvantages").val().trim();
+    /*target__information*/
+    var targetTask = $("#targetTask").val().trim();
+    var targetUseful = $("#targetUseful").val().trim();
+    var targetAction = $("#targetAction").val().trim();
+    /*type__information*/
     var modalIntroSelect = $("#modalIntroSelect option:selected").val().trim();
-      console.log(modalIntroSelect);
-    var modalMessage = $("#modalIntroQuestion").val().trim();
-    if (modalName.length < 4) {
-      var mErrorNameText = $("#modalIntroName").attr("data-message");
-      modalErrorMessage.text(mErrorNameText);
+    /*design__information*/
+    var designUrl = $("#designUrl").val().trim();
+    var designColor = $("#designColor").val().trim();
+    var designWishes = $("#designWishes").val().trim();
+    /*contact information varification*/
+    if (mainName.length < 4) {
+      var errorMainNameText = $("#mainName").attr("data-message");
+      $("#mainName").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorMainNameText);
       return false;
-    } else if (modalphone.length < 6 || !modalIntRegex.test(modalphone)) {
-      var mErrorPhoneText = $("#modalIntroPhone").attr("data-message");
-      modalErrorMessage.text(mErrorPhoneText);
+    } else if (mainOrganisation.length < 4){
+      $("#mainName").removeAttr("style");
+      var errorMainOrganisationText = $("#mainOrganisation").attr("data-message");
+      $("#mainOrganisation").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorMainOrganisationText);
       return false;
-    } else if(modalIntroSelect === "1"){
-      var mErrorselectText = $("#modalIntroSelect").attr("data-message");
-      modalErrorMessage.text(mErrorselectText);
+    }else if (mainMail == "" || !mainMaillReg.test(mainMail)){
+      $("#mainOrganisation").removeAttr("style");
+      var errorMainMailText = $("#mainMail").attr("data-message");
+      $("#mainMail").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorMainMailText);
       return false;
-    } else if (modalMessage.length < 14) {
-      var mErrorMessageText = $("#modalIntroQuestion").attr("data-message");
-      modalErrorMessage.text(mErrorMessageText);
+    }else if (mainPhone.length < 6 || !mainPhoneIntRegex.test(mainPhone)){
+      $("#mainMail").removeAttr("style");
+      var errorMainPhoneText = $("#mainPhone").attr("data-message");
+      $("#mainPhone").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorMainPhoneText);
       return false;
     }
+    /*company information verification*/
+    else if(companyUrl.length < 6){
+      $("#mainPhone").removeAttr("style");
+      var errorCompanyUrlText = $("#companyUrl").attr("data-message");
+      $("#companyUrl").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorCompanyUrlText);
+      return false;
+    }else if(companyServicess.length < 15){
+      $("#companyUrl").removeAttr("style");
+      var errorCompanyServicessText = $("#companyServicess").attr("data-message");
+      $("#companyServicess").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorCompanyServicessText);
+      return false;
+    }else if(companyMission.length < 8){
+      $("#companyServicess").removeAttr("style");
+      var errorCompanyMissionText = $("#companyMission").attr("data-message");
+      $("#companyMission").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorCompanyMissionText);
+      return false;
+    }else if(companyAdvantages.length < 5){
+      $("#companyMission").removeAttr("style");
+      var errorCompanyAdvantagesText = $("#companyAdvantages").attr("data-message");
+      $("#companyAdvantages").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorCompanyAdvantagesText);
+      return false;
+    }
+    /*target information verification*/
+    else if(targetTask.length < 10){
+      $("#companyAdvantages").removeAttr("style");
+      var errorTargetTaskText = $("#targetTask").attr("data-message");
+      $("#targetTask").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorTargetTaskText);
+      return false;
+    }else if(targetUseful.length <10){
+      $("#targetTask").removeAttr("style");
+      var errorTargetUsefulText = $("#targetUseful").attr("data-message");
+      $("#targetUseful").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorTargetUsefulText);
+      return false;
+    }else if(targetAction.length < 10){
+      $("#targetUseful").removeAttr("style");
+      var errorTargetActionText = $("#targetAction").attr("data-message");
+      $("#targetAction").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorTargetActionText);
+      return false;
+    }
+    /*type information validation*/
+    else if(modalIntroSelect === "1"){
+      $("#targetAction").removeAttr("style");
+      var errorModalIntroSelectText = $("#modalIntroSelect").attr("data-message");
+      $("#modalIntroSelect").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorModalIntroSelectText);
+      return false;
+    }
+    /*design information validation*/
+    
+    
+    
+    
+    
+    
+        /*radio__items*/
+    /*var finishedDesign = $("#finishedDesign").is(':checked');
+        if(finishedDesign == true){
+          var finishedDesignData =  $("#finishedDesign").attr("value");
+        }else{
+          return false;
+        }
+    var individualDesign = $("#individualDesign").is(':checked');
+        if(individualDesign == true){
+          var individualDesignData = $("#individualDesign").attr("value");
+        }else{
+          return false;
+        }*/
     modalErrorMessage.text("");
     $.ajax({
       url: "../php/modalMail.php",
