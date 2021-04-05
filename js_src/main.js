@@ -246,6 +246,9 @@ jQuery(document).ready(function () {
     var designUrl = $("#designUrl").val().trim();
     var designColor = $("#designColor").val().trim();
     var designWishes = $("#designWishes").val().trim();
+    /*radio__items*/
+    var finishedDesign = $("#finishedDesign").is(':checked');
+    var individualDesign = $("#individualDesign").is(':checked');
     /*contact information varification*/
     if (mainName.length < 4) {
       var errorMainNameText = $("#mainName").attr("data-message");
@@ -350,11 +353,35 @@ jQuery(document).ready(function () {
       return false;
     }
     /*design information validation*/
-    
-    
-    
-    
-    
+    else if(designUrl.length < 10){
+      $("#modalIntroSelect").removeAttr("style");
+      var errorDesignUrlText = $("#designUrl").attr("data-message");
+      $("#designUrl").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorDesignUrlText);
+      return false;
+    }else if(designColor.length < 8){
+      $("#designUrl").removeAttr("style");
+      var errorDesignColorText = $("#designColor").attr("data-message");
+      $("#designColor").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorDesignColorText);
+      return false;
+    }else if(designWishes.length < 8){
+      $("#designColor").removeAttr("style");
+      var errorDesignWishesText = $("#designColor").attr("data-message");
+      $("#designWishes").css({
+        "border-color": "#ee171f"
+      });
+      modalErrorMessage.text(errorDesignWishesText);
+      return false;
+    }
+    /*radio items verification*/
+    else if(finishedDesign == true || individualDesign == true){
+      $("#designWishes").removeAttr("style");
+    }
     
         /*radio__items*/
     /*var finishedDesign = $("#finishedDesign").is(':checked');
