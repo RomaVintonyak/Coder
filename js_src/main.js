@@ -247,8 +247,13 @@ jQuery(document).ready(function () {
     var designColor = $("#designColor").val().trim();
     var designWishes = $("#designWishes").val().trim();
     /*radio__items*/
+    
     var finishedDesign = $("#finishedDesign").is(':checked');
     var individualDesign = $("#individualDesign").is(':checked');
+    
+    console.log(finishedDesign);
+    console.log(individualDesign);
+    
     /*contact information varification*/
     if (mainName.length < 4) {
       var errorMainNameText = $("#mainName").attr("data-message");
@@ -379,33 +384,39 @@ jQuery(document).ready(function () {
       return false;
     }
     /*radio items verification*/
-    else if(finishedDesign == true || individualDesign == true){
+    else if(finishedDesign.length > 0 /*== true*/){
       $("#designWishes").removeAttr("style");
+      var finishedDesignData =  $("#finishedDesign").attr("value");
+      console.log(finishedDesignData);
+      return false;
+    }else if(individualDesign.lenght > 0 /*== true*/){
+      $("#designWishes").removeAttr("style");
+      var individualDesignData = $("#individualDesign").attr("value");
+      console.log(individualDesignData);
+      return false;
     }
-    
-        /*radio__items*/
-    /*var finishedDesign = $("#finishedDesign").is(':checked');
-        if(finishedDesign == true){
-          var finishedDesignData =  $("#finishedDesign").attr("value");
-        }else{
-          return false;
-        }
-    var individualDesign = $("#individualDesign").is(':checked');
-        if(individualDesign == true){
-          var individualDesignData = $("#individualDesign").attr("value");
-        }else{
-          return false;
-        }*/
+    $("[data-message]").removeAttr("style");
     modalErrorMessage.text("");
     $.ajax({
       url: "../php/modalMail.php",
       type: "POST",
       cache: false,
       data: {
-        modalName: modalName,
-        modalphone: modalphone,
+        mainName: mainName,
+        mainOrganisation: mainOrganisation,
+        mainMail: mainMail,
+        mainPhone: mainPhone,
+        companyUrl: companyUrl,
+        companyServicess: companyServicess,
+        companyMission: companyMission,
+        companyAdvantages: companyAdvantages,
+        targetTask: targetTask,
+        targetUseful: targetUseful,
+        targetAction: targetAction,
         modalIntroSelect: modalIntroSelect,
-        modalMessage: modalMessage,
+        designUrl: designUrl,
+        designColor: designColor,
+        designWishes: designWishes
       },
       dataType: "html",
       beforeSend: function () {
